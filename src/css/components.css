@@ -104,3 +104,10 @@
 }
 
 
+#removed-alert{
+  background-color: var(--color-danger);
+  font: var(--paragraph);
+  padding: 12px;
+  color: var(--content-always-white);
+  border-radius: 12px;
+}

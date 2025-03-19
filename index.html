@@ -8,9 +8,10 @@
 </head>
 <body>
  <main class="container-sm">
-  <section class="display-home">
-    <header>
-      <a class="" href="#">Voltar</a>
+   <div id="logo" class="flex justify-center align-center"><img src="./assets/logo.png" alt=""></div>
+   <section class="display-home">
+     <header>
+      <a id="voltar" class="" href="#"><- Voltar</a>
       <h1>Compras da semana</h1>
     </header>
     
@@ -23,11 +24,11 @@
 
     <!--LISTA DE ITEMS-->
     <ul class="lista-items">
-      <li class="control-group flex no-wrap">
-        <label class="control control-checkbox flex-grow ">
+      <li class="control-group flex no-wrap align-center justify-center">
+        <label class="control control-checkbox flex-grow flex" >
           <input type="checkbox"/>
           <div class="control_indicator"></div>
-          <span>Pão de forma</span>
+          <span >Pão de forma</span>
         </label>
         <div><img  src="./assets/icons/trash.svg" alt="lixeira"></div>
       </li>
@@ -48,6 +49,17 @@
         <div><img src="./assets/icons/trash.svg" alt="lixeira"></div>
       </li>
     </ul>
+    <footer>
+      <div  id="removed-alert"  class="flex align-center d-none" >
+        <div class="flex flex-grow gap-8">
+          <img src="./assets/icons/warning-circle-filled-white.svg" alt="icone de alerta">
+        <p>O item foi removido da lista</p>
+        </div>
+        <div>
+          <img src="./assets/icons/delete-small-white.svg" alt="icone de fechar">
+        </div>
+      </div>
+    </footer>
   </section>
 
  </main>

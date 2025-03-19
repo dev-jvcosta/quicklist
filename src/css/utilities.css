@@ -1,7 +1,6 @@
 
 .flex{
   display: flex;
-  
 }
 
 .flex-col{
@@ -27,4 +26,24 @@
 
 .no-wrap{
   flex-wrap: nowrap;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.d-none{
+  display: none;
+}
+
+.gap-8{
+  gap: 0.5rem;
 }
