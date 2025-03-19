@@ -69,3 +69,34 @@ input[type="checkbox"] {
     color: black;
   }
 }
+section{
+  height: 100vh;
+  margin: 5% auto;
+  align-items: start;
+  border: 1px solid red;
+  padding-inline: 2rem
+}
+
+form{
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  margin-bottom: 44px;
+  margin-top: 16px;
+}
+
+a{
+  margin-top: 34px;
+  margin-bottom: 1rem;
+}
+
+li{
+  padding: 8px 12px;
+}
+
+label>span{
+  font: var(--paragraph);
+}

@@ -1,0 +1,6 @@
+.lista-items{
+  margin-top: 40px;
+  &>li{
+    margin-bottom: 12px;
+  }
+}

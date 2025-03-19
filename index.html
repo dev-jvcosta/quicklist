@@ -7,14 +7,49 @@
   <link rel="stylesheet" href="./src/css/index.css">
 </head>
 <body>
- 
+ <main class="container-sm">
+  <section class="display-home">
+    <header>
+      <a class="" href="#">Voltar</a>
+      <h1>Compras da semana</h1>
+    </header>
+    
+    <form action="">
+      <div class="flex flex-col gap-16">
+        <input class="text-field" type="text" placeholder="Adicionar item">
+      <button class="btn">Adicionar item</button>
+      </div>
+    </form>
+
+    <!--LISTA DE ITEMS-->
+    <ul class="lista-items">
+      <li class="control-group flex no-wrap">
+        <label class="control control-checkbox flex-grow ">
+          <input type="checkbox"/>
+          <div class="control_indicator"></div>
+          <span>Pão de forma</span>
+        </label>
+        <div><img  src="./assets/icons/trash.svg" alt="lixeira"></div>
+      </li>
+      <li class="control-group flex no-wrap ">
+        <label class="control control-checkbox flex-grow">
+          <input type="checkbox"/>
+          <div class="control_indicator"></div>
+          <span>Café preto</span>
+        </label>
+        <div><img class src="./assets/icons/trash.svg" alt="lixeira"></div>
+      </li>
+      <li class="control-group flex no-wrap">
+        <label class="control control-checkbox flex-grow">
+          <input type="checkbox"/>
+          <div class="control_indicator"></div>
+          <span>Suco de laranja</span>
+        </label>
+        <div><img src="./assets/icons/trash.svg" alt="lixeira"></div>
+      </li>
+    </ul>
+  </section>
+
+ </main>
 </body>
 </html>
-<!--USAR PARA OS CHECK BUTTONS-->
- <!--<div class="control-group">
-    <label class="control control-checkbox">
-        First checkbox
-        <input  type="checkbox" checked="checked" />
-        <div class="control_indicator"></div>
-    </label>
-  </div>-->
