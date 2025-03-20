@@ -9,14 +9,38 @@
 <body>
   <main>
     <div class="container">
-      <header>
-        <a href="#"><- Voltar</a>
-        <h1>Lista de Compras</h1>
+      <section>
+        <a id="back-button" href="#"><- Voltar</a>
+        <h1>Compras da semana</h1>
         <form class="flex flex-col gap-16">
           <input class="input-box grow" type="text" id="input-box" placeholder="Adicione um item">
           <button class="btn" id="add-button">Adicionar</button>
         </form>
-      </header>
+        
+        <!--ITEMS ADICIONADOS A LISTA-->
+        <ul id="list-container">
+          <li>
+            <input type="checkbox" id="item-1" checked>
+            <label for="item-1">Pão de forma</label>
+            <button><img src="./assets/icons/trash.svg" alt=""></button>
+          </li>
+          <li>
+            <input type="checkbox" id="item-2">
+            <label for="item-2">Café preto</label>
+            <button><img src="./assets/icons/trash.svg" alt=""></button>
+          </li>
+          <li>
+            <input type="checkbox" id="item-3">
+            <label for="item-3">Suco de laranja</label>
+            <button><img src="./assets/icons/trash.svg" alt=""></button>
+          </li>
+          <li>
+            <input type="checkbox" id="item-4">
+            <label for="item-4">Bolacha</label>
+            <button><img src="./assets/icons/trash.svg" alt=""></button>
+          </li>
+        </ul>
+      </section>
     </div>
   </main>
  <script src="./src/js/index.js"></script>

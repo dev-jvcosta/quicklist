@@ -4,6 +4,7 @@
   background-color: var(--color-brand);
   font: var(--label);
   color: var(--content-always-white);
+  outline: none;
   &:hover{
     background-color: var(--color-brand-hover);
   }
