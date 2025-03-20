@@ -7,63 +7,18 @@
   <link rel="stylesheet" href="./src/css/index.css">
 </head>
 <body>
- <main class="container-sm">
-   <div id="logo" class="flex justify-center align-center"><img src="./assets/logo.png" alt=""></div>
-   <section class="display-home">
-     <header>
-      <a id="voltar" class="" href="#"><- Voltar</a>
-      <h1>Compras da semana</h1>
-    </header>
-    
-    <form action="">
-      <div class="flex flex-col gap-16">
-        <input class="text-field" type="text" placeholder="Adicionar item">
-      <button class="btn">Adicionar item</button>
-      </div>
-    </form>
-
-    <!--LISTA DE ITEMS-->
-    <ul class="lista-items">
-      <li class="control-group flex no-wrap align-center justify-center">
-        <label class="control control-checkbox flex-grow flex" >
-          <input type="checkbox"/>
-          <div class="control_indicator"></div>
-          <span >Pão de forma</span>
-        </label>
-        <div><button class="btn-trash"></button></div>
-      </li>
-      <li class="control-group flex no-wrap ">
-        <label class="control control-checkbox flex-grow">
-          <input type="checkbox"/>
-          <div class="control_indicator"></div>
-          <span>Café preto</span>
-        </label>
-        <div><button class="btn-trash"></button></div>
-      </li>
-      <li class="control-group flex no-wrap">
-        <label class="control control-checkbox flex-grow">
-          <input type="checkbox"/>
-          <div class="control_indicator"></div>
-          <span>Suco de laranja</span>
-        </label>
-        <div><button class="btn-trash"></button></div>
-      </li>
-    </ul>
-
-    <!--ALERTA DE ELEMENTOS EXCLUIDOS-->
-    <footer>
-      <div  id="removed-alert"  class="flex align-center d-none" >
-        <div class="flex flex-grow gap-8">
-          <img src="./assets/icons/warning-circle-filled-white.svg" alt="icone de alerta">
-        <p>O item foi removido da lista</p>
-        </div>
-        <div>
-          <img src="./assets/icons/delete-small-white.svg" alt="icone de fechar">
-        </div>
-      </div>
-    </footer>
-  </section>
-
- </main>
+  <main>
+    <div class="container">
+      <header>
+        <a href="#"><- Voltar</a>
+        <h1>Lista de Compras</h1>
+        <form class="flex flex-col gap-16">
+          <input class="input-box grow" type="text" id="input-box" placeholder="Adicione um item">
+          <button class="btn" id="add-button">Adicionar</button>
+        </form>
+      </header>
+    </div>
+  </main>
+ <script src="./src/js/index.js"></script>
 </body>
 </html>
