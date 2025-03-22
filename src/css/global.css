@@ -65,7 +65,7 @@ ul{
   margin-top: 2.5rem;
 }
 
-li{
+li>div{
   display: flex;
   align-items: center;
   padding: 8px 12px;
