@@ -14,18 +14,13 @@
         <h1>Compras da semana</h1>
         <form class="flex flex-col gap-16">
           <input class="input-box grow" type="text" id="input-box" placeholder="Adicione um item">
-          <button class="btn" id="add-button" >Adicionar</button>
+          <button class="btn" id="add-button" type="submit">Adicionar</button>
         </form>
         
         <!--ITEMS ADICIONADOS A LISTA-->
         <ul id="list-container">
-          <li>
-            <div>
-              <input class="input-default-style" type="checkbox" id="item-1" >
-            <label for="item-1">Pão de forma</label>
-            <button><img src="./assets/icons/trash.svg" alt=""></button>
-            </div>
-          </li>
+          <!-- A <li> não é mais necessaria ficar estatica, já está sendo adionada quando add o novo item -->
+        </ul>
       </section>
     </div>
   </main>

@@ -1,49 +1,33 @@
 const inputBox = document.querySelector('#input-box');
 const listContainer = document.querySelector('#list-container');
-const btnAction = document.querySelector('#add-button');
+const form = document.querySelector('form'); // Captura o form
 
-btnAction.addEventListener('click', (e) => {
-  e.preventDefault();
-  
-  const firstLi = document.querySelector('li>div'); // Captura o primeiro <li> existente
-  
-  if (inputBox.value === '') {
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // Impede o recarregamento da página
+
+  // O método trim() remove os espaços em branco do início e fim da string
+  if(inputBox.value.trim() === '') {
     alert('Por favor, insira um item na lista');
-  } else {
-    let newLi = document.createElement('li');
+    return;
+}
+  
+let newLi = document.createElement('li'); // Cria um novo <li>
 
-    if (firstLi) {
-      // Se já houver um item na lista, clona o primeiro
-      const clonedLi = firstLi.cloneNode(true);
-      newLi.appendChild(clonedLi);
-    } else {
-      // Se a lista estiver vazia, cria o item do zero
-      newLi.innerHTML = `
-        <input type="checkbox">
-        <label>${inputBox.value}</label>
-        <button><img src="./assets/icons/trash.svg" alt=""></button>
-      `;
-    }
+// Se a lista estiver vazia, cria o item do zero
+newLi.innerHTML = `
+  <div class="item-container"> 
+    <input class="input-default-style" type="checkbox">
+    <label>${inputBox.value}</label>
+    <button class="btn-trash" onclick="removeItem(this)"></button>
+  </div>
+`;
 
-    // Atualiza o texto do <label>
-    newLi.querySelector('label').textContent = inputBox.value;
-    
-    // Adiciona o novo item à lista
-    listContainer.appendChild(newLi);
-    
-    // Limpa o input
-    inputBox.value = '';
+listContainer.appendChild(newLi); // Adiciona o item na lista
+inputBox.value = ''; // Limpa o campo de input
 
-    // Atualiza os botões de remoção
-    updateRemoveButtons();
-  }
+// Atualiza os botões de remoção (Quando adiciona o onClick no HTML já fica setado a função de remoção quando clica no botão)
 });
 
-function updateRemoveButtons() {
-  const btnRemove = document.querySelectorAll('li button');
-  btnRemove.forEach((btn) => {
-    btn.onclick = () => {
-      btn.closest('li').remove();
-    };
-  });
+function removeItem(button) {
+  button.closest("li").remove();
 }
