@@ -13,10 +13,10 @@ form.addEventListener('submit', (e) => {
   
 let newLi = document.createElement('li'); // Cria um novo <li>
 
-// Se a lista estiver vazia, cria o item do zero
+// Se a lista estiver vazia, cria o item do zero.
 newLi.innerHTML = `
   <div class="item-container"> 
-    <input class="input-default-style" type="checkbox">
+    <input class="input-default-style" type="checkbox" onclick="checkItem(this)">
     <label>${inputBox.value}</label>
     <button class="btn-trash" onclick="removeItem(this)"></button>
   </div>
@@ -30,4 +30,13 @@ inputBox.value = ''; // Limpa o campo de input
 
 function removeItem(button) {
   button.closest("li").remove();
+}
+
+// Quando clica na checkbox, marca o item como feito
+function checkItem(input) {
+  if(input.checked) {
+    input.closest("li").style.textDecoration = "line-through";
+  } else {
+    input.closest("li").style.textDecoration = "none";
+  }
 }

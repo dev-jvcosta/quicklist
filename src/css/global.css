@@ -90,3 +90,24 @@ li>div{
   margin-bottom: 1rem;
 
 }
+
+.input-default-style{
+  all: unset; /* Reseta todos os estilos padrao do input*/
+  border: 1px solid var(--content-secondary);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  
+  &:checked{
+    background-color: var(--color-brand);
+    background-image: url(../../assets/icons/state=selected.svg);
+  }
+}
+
+.line-trough{
+  text-decoration: line-through;
+}
+
+
