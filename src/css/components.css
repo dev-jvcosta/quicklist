@@ -105,13 +105,34 @@
 }
 
 
-#removed-alert{
+#item-removed-alert{
+  display: none;
   background-color: var(--color-danger);
   font: var(--paragraph);
-  padding: 12px;
+  height: 44px;
   color: var(--content-always-white);
   border-radius: 12px;
-}
+  overflow: hidden;
+  width: 100%;
+  cursor: context-menu;
+  & > span{
+    background-image: url(../../assets/icons/warning-circle-filled-white.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+  & > button{
+    background-image: url(../../assets/icons/delete-small-white.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+  }
+
 
 .btn-trash{
   background-image: url(../../assets/icons/trash.svg);

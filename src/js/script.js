@@ -2,6 +2,8 @@ const inputBox = document.querySelector('#input-box');
 const listContainer = document.querySelector('#list-container');
 const form = document.querySelector('form'); // Captura o form
 
+
+
 form.addEventListener('submit', (e) => {
   e.preventDefault(); // Impede o recarregamento da página
 
@@ -30,6 +32,22 @@ inputBox.value = ''; // Limpa o campo de input
 
 function removeItem(button) {
   button.closest("li").remove();
+
+  // Exibe o componente de item removido
+  const displayItemRemoved = document.getElementById("item-removed-alert");
+
+  // Esconde o componente de item removido
+  displayItemRemoved.style.display = "flex";
+  displayItemRemoved.classList.remove("hide");
+
+  // Desaparece o componente de item removido
+  setTimeout(() => {
+    displayItemRemoved.classList.add("hide");
+    setTimeout(() => {
+      displayItemRemoved.style.display = "none";
+      displayItemRemoved.classList.remove("hide");
+    }, 500);
+  }, 1000);
 }
 
 // Quando clica na checkbox, marca o item como feito
