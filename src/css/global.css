@@ -29,11 +29,19 @@
 
 }
 
+header {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+
+}
+
 
 .container{
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-danger) 100%);
+  
   padding: 10px;
 }
 
@@ -51,6 +59,7 @@ section{
     font: var(--title);
     margin-bottom: 1.25rem;
     margin-top: 1rem;
+    
   }
 
   &>form{
